@@ -23,6 +23,16 @@ class Jug {
     //returns 1 if solution is found and stores solution steps in solution string.
     int solve(string &solution);
  private:
+    // Ca == capacity of jug A
+    // Cb == capacity of jug B
+    // n == goal
+    // cfA == the weight of the edge of filling A (for a graph)
+    // cfB == the weight of the edge of filling B (for a graph)
+    // ceA == the weight of the edge of emptying A (for a graph)
+    // ceB == the weight of the edge of emptying B (for a graph)
+    // cpAB == the weight of the edge of pouring A into B (for a graph)
+    // cpBA == the weight of the edge of pouring B into A (for a graph)
+    
     int Ca;
     int Cb;
     int N;
