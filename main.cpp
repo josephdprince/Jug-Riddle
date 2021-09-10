@@ -18,10 +18,16 @@ int main() {
    cin >> goal;
 
    Jug head(aSize, bSize, goal, 1, 1, 1, 1, 1, 1);
-   if (head.solve(solution) != 1) {
-      cout << "Error 3" << endl;
+   int errorNum = head.solve(solution);
+   if (errorNum == -1) {
+      cout << "\nError: Invalid Input\n";
    }
-   cout << endl << solution << endl;
+   else if (errorNum == 0){
+      cout << "\nError: No Solution Found\n";
+   }
+   else {
+      cout << endl << solution << endl;
+   }
 
     return 0;
 }
